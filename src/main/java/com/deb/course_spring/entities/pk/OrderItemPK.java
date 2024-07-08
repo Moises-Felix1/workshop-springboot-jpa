@@ -18,6 +18,7 @@ public class OrderItemPK implements Serializable{
 	@ManyToOne
 	@JoinColumn(name = "order_id")
 	private Order order;
+	
 	@ManyToOne
 	@JoinColumn(name = "product_id")
 	private Product product;
@@ -34,6 +35,7 @@ public class OrderItemPK implements Serializable{
 	public void setProduct(Product product) {
 		this.product = product;
 	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(order, product);
